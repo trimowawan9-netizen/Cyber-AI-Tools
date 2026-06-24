@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1.3 Network Basics - Cyber Academy</title>
+    <style>
+        body {margin: 0; font-family: 'Courier New', monospace; background: #0a0a0a; color: #00ff88; padding: 20px; line-height: 1.6;}
+        .container {max-width: 800px; margin: 0 auto;}
+        h1 {color: #00ff88; text-shadow: 0 0 10px #00ff88;}
+        h2 {color: #00ff88; margin-top: 30px;}
+        .back-btn {display: inline-block; margin-bottom: 20px; padding: 10px 20px; background: #00ff88; color: #0a0a0a; text-decoration: none; border-radius: 5px; font-weight: bold;}
+        .box {background: #111; border-left: 4px solid #00ff88; padding: 15px; margin: 20px 0;}
+        code {background: #222; padding: 2px 6px; border-radius: 3px; color: #ffaa00;}
+        table {width: 100%; border-collapse: collapse; margin: 15px 0;}
+        td, th {border: 1px solid #00ff88; padding: 8px; text-align: left;}
+        th {background: #111;}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="fundamental.html" class="back-btn">← Kembali ke Fundamental</a>
+        <h1>1.3 Network Basics</h1>
+        <p>IP Address, TCP/IP, DNS, Port. Bahasa komputer biar bisa ngobrol</p>
+        
+        <h2>1. IP Address = Alamat Rumah Komputer</h2>
+        <p>Setiap device di internet punya alamat unik. Format: xxx.xxx</p>
+        <div class="box">
+            Contoh: <code>192.168.1.1</code> = Router rumah<br>
+            <code>8.8.8.8</code> = DNS Google<br>
+            <code>127.0.0.1</code> = Localhost = komputer kamu sendiri
+        </div>
+        
+        <h2>2. Port = Pintu Rumah</h2>
+        <p>1 IP punya 65535 port. Tiap port buat layanan beda</p>
+        <table>
+            <tr><th>Port</th><th>Layanan</th><th>Catatan Hacker</th></tr>
+            <tr><td>21</td><td>FTP</td><td>Transfer file - rawan</td></tr>
+            <tr><td>22</td><td>SSH</td><td>Remote server Linux</td></tr>
+            <tr><td>80</td><td>HTTP</td><td>Website biasa</td></tr>
+            <tr><td>443</td><td>HTTPS</td><td>Website aman/gembok</td></tr>
+        </table>
+        
+        <h2>3. TCP/IP = Aturan Ngobrol</h2>
+        <p>Protokol biar data gak nyasar. TCP = pasti nyampe, UDP = cepat tapi bisa hilang</p>
+        
+        <h2>4. DNS = Buku Telepon Internet</h2>
+        <p>Ngubah nama jadi IP. <code>google.com</code> → <code>142.250.185.78</code></p>
+        <div class="box">
+            <b>Command wajib:</b><br>
+            <code>ping google.com</code> - Cek koneksi + liat IP<br>
+            <code>nslookup google.com</code> - Liat IP dari nama domain
+        </div>
+        
+        <div class="box">
+            <b>🔥 Latihan:</b> Buka CMD/Terminal ketik <code>ping 8.8.8.8</code> Enter. 
+            Kalo ada "Reply from" = internet kamu nyambung
+        </div>
+    </div>
+</body>
+</html>
