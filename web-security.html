@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bab 3: Web Security - Cyber Academy</title>
+    <style>
+        body {margin: 0; font-family: 'Courier New', monospace; background: #0a0a0a; color: #00d4ff; display: flex; justify-content: center; align-items: center; min-height: 100vh; padding: 20px;}
+        .container {text-align: center; max-width: 700px; width: 100%;}
+        h1 {color: #00d4ff; margin-bottom: 10px; font-size: 28px; text-shadow: 0 0 10px #00d4ff;}
+        .subtitle {color: #ffaa00; margin-bottom: 30px; font-size: 14px;}
+        .back-btn {display: inline-block; margin-bottom: 30px; padding: 10px 20px; background: #00d4ff; color: #0a0a0a; text-decoration: none; border-radius: 5px; font-weight: bold; transition: 0.3s;}
+        .back-btn:hover {background: #00aaff; transform: scale(1.05);}
+        .menu-grid {display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 20px;}
+        .menu-btn {padding: 18px; background: #111; border: 2px solid #00d4ff; color: #00d4ff; text-decoration: none; border-radius: 8px; transition: 0.3s; font-size: 15px; display: block;}
+        .menu-btn:hover {background: #00d4ff; color: #0a0a0a; transform: translateY(-3px); box-shadow: 0 5px 15px rgba(0,212,255,0.4);}
+        .badge {font-size: 11px; color: #00ff88; margin-top: 5px; display: block;}
+        .footer {margin-top: 40px; color: #555; font-size: 12px;}
+        .progress {color: #ffaa00; margin-bottom: 20px; font-size: 16px;}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="pentest.html" class="back-btn">← Kembali ke Menu Pentest</a>
+        
+        <h1>BAB 3: WEB SECURITY</h1>
+        <div class="progress">Progress: 5/5 Materi ✅ 100% Complete</div>
+        <div class="subtitle">Ethical Hacking: Konsep, Defense & Tools Legal</div>
+        
+        <div class="menu-grid">
+            <a href="html-css-js.html" class="menu-btn">
+                3.1 HTML CSS JS Dasar Web<br>
+                <span class="badge">Foundation Hacker</span>
+            </a>
+            
+            <a href="sql-injection.html" class="menu-btn">
+                3.2 SQL Injection<br>
+                <span class="badge">Konsep + Defense</span>
+            </a>
+            
+            <a href="xss.html" class="menu-btn">
+                3.3 XSS Cross Site Scripting<br>
+                <span class="badge">3 Jenis + CSP</span>
+            </a>
+            
+            <a href="csrf.html" class="menu-btn">
+                3.4 CSRF Attack<br>
+                <span class="badge">Token + SameSite</span>
+            </a>
+            
+            <a href="burp-suite.html" class="menu-btn">
+                3.5 Burp Suite Tools<br>
+                <span class="badge">Proxy + Repeater</span>
+            </a>
+        </div>
+        
+        <div class="footer">
+            Catatan: Semua materi untuk edukasi & defense. Test hanya di lab DVWA/web sendiri. UU ITE berlaku.<br>
+            Cyber Academy v3.0 | Bab 3 Selesai
+        </div>
+    </div>
+</body>
+</html>
