@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3.3 XSS - Cyber Academy</title>
+    <style>
+        body {margin: 0; font-family: 'Courier New', monospace; background: #0a0a0a; color: #00d4ff; padding: 20px; line-height: 1.6;}
+        .container {max-width: 800px; margin: 0 auto;}
+        h1 {color: #00d4ff; text-shadow: 0 0 10px #00d4ff;}
+        h2 {color: #00d4ff; margin-top: 30px; border-bottom: 1px solid #00d4ff; padding-bottom: 5px;}
+        .warning {color: #ff4444; font-weight: bold; background: #1a1a1a; padding: 15px; border-radius: 5px; border-left: 3px solid #ff4444;}
+        .code-box {background: #111; border-left: 3px solid #00d4ff; padding: 15px; margin: 15px 0; overflow-x: auto;}
+        .safe {border-left-color: #00ff88;}
+        .highlight {color: #ffaa00;}
+        .back-btn {display: inline-block; margin-bottom: 20px; padding: 10px 20px; background: #00d4ff; color: #0a0a0a; text-decoration: none; border-radius: 5px; font-weight: bold;}
+        .latihan {background: #1a1a1a; border: 1px solid #00d4ff; padding: 15px; margin-top: 20px; border-radius: 5px;}
+        .jenis {background: #0f0f0f; padding: 10px; margin: 10px 0; border-left: 2px solid #ffaa00;}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="web-security.html" class="back-btn">← Kembali ke Web Security</a>
+        
+        <h1>3.3 XSS Cross Site Scripting</h1>
+        
+        <div class="warning">
+            ⚠️ ETIKA: XSS cuma boleh diuji di DVWA, PortSwigger Lab, atau web milik sendiri. 
+            Nyuntik JS ke web asli = nyolong data orang = melanggar hukum.
+        </div>
+        
+        <h2>1. Apa itu XSS?</h2>
+        <p>XSS = attacker nyelipin kode JavaScript ke web korban. 
+        Ibarat: Kamu nulis komentar "Halo", tapi webnya nurut kalau kamu tulis "Halo + nyalain kamera korban".</p>
+        
+        <h2>2. 3 Jenis XSS Paling Umum</h2>
+        <div class="jenis">
+            <b>1. Reflected XSS</b><br>
+            Script cuma jalan 1x pas korban klik link jahat. Contoh: link search di web
+        </div>
+        <div class="jenis">
+            <b>2. Stored XSS</b><br>
+            Script disimpan di database. Jalan tiap ada orang buka halaman itu. Paling bahaya.
+        </div>
+        <div class="jenis">
+            <b>3. DOM XSS</b><br>
+            JS di browser korban yang gak aman. Script gak ke server, tapi browsernya yang ketipu.
+        </div>
+        
+        <h2>3. Dampak Kalau Kena XSS</h2>
+        <div class="code-box">
+            <span class="highlight">1. Cookie Theft:</span> Maling session login korban<br>
+            <span class="highlight">2. Keylogger:</span> Catat semua yang diketik korban<br>
+            <span class="highlight">3. Deface:</span> Ganti tampilan web di browser korban<br>
+            <span class="highlight">4. Redirect:</span> Lempar korban ke web phishing
+        </div>
+        
+        <h2>4. Cara Defense XSS = Jadi Developer Aman</h2>
+        <div class="code-box safe">
+            <span class="highlight">1. Output Encoding / Escape</span><br>
+            Semua input user diubah jadi teks biasa. Contoh: &lt; jadi &amp;lt;<br>
+            Bahasa: PHP pakai htmlspecialchars(), JS pakai textContent<br><br>
+            
+            <span class="highlight">2. Content Security Policy CSP</span><br>
+            Bilang ke browser: "Cuma boleh jalanin JS dari domain gua sendiri"<br><br>
+            
+            <span class="highlight">3. Validasi Input</span><br>
+            Komentar cuma boleh huruf/angka. Tag HTML &lt;script&gt; langsung dibuang.<br><br>
+            
+            <span class="highlight">4. HttpOnly Cookie</span><br>
+            Cookie login gak bisa diakses JS. Jadi walau kena XSS, cookie aman.
+        </div>
+        
+        <h2>5. Lab Legal Buat Latihan XSS</h2>
+        <div class="code-box">
+            1. <span class="highlight">DVWA</span> → Set level low → liat XSS reflected<br>
+            2. <span class="highlight">PortSwigger Web Security Academy</span> → Gratis + sertifikat<br>
+            3. <span class="highlight">XSS Game Google</span> → Game edukasi XSS
+        </div>
+        
+        <div class="latihan">
+            🔥 <b>Latihan Aman 2 Menit:</b><br>
+            1. Buka web kamu sendiri → Inspect → Console<br>
+            2. Ketik: <span class="highlight">document.body.innerHTML = '&lt;h1&gt;Lu Kena XSS&lt;/h1&gt;'</span><br>
+            3. Itu DOM XSS versi lokal. Cuma ngerubah di browser kamu doang, aman.<br>
+            4. Sekarang paham kan kenapa dev harus filter input?
+        </div>
+        
+        <p style="margin-top:30px; color:#888;">XSS Hunter = pemburu bayaran tertinggi di Bug Bounty. 1 XSS Stored bisa $1000+. Tapi kuncinya: jago defense dulu.</p>
+    </div>
+</body>
+</html>
