@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2.2 TCP/IP & Port - Cyber Academy</title>
+    <style>
+        body {margin: 0; font-family: 'Courier New', monospace; background: #0a0a0a; color: #00ff88; padding: 20px; line-height: 1.6;}
+        .container {max-width: 800px; margin: 0 auto;}
+        h1 {color: #00ff88; text-shadow: 0 0 10px #00ff88;}
+        h2 {color: #00ff88; margin-top: 30px; border-bottom: 1px solid #00ff88; padding-bottom: 5px;}
+        .code-box {background: #111; border-left: 3px solid #00ff88; padding: 15px; margin: 15px 0; overflow-x: auto;}
+        .highlight {color: #ffaa00;}
+        .back-btn {display: inline-block; margin-bottom: 20px; padding: 10px 20px; background: #00ff88; color: #0a0a0a; text-decoration: none; border-radius: 5px; font-weight: bold;}
+        .latihan {background: #1a1a1a; border: 1px solid #00ff88; padding: 15px; margin-top: 20px; border-radius: 5px;}
+        table {width: 100%; border-collapse: collapse; margin: 15px 0;}
+        table, th, td {border: 1px solid #00ff88;}
+        th, td {padding: 10px; text-align: left;}
+        th {background: #1a1a1a;}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="networking.html" class="back-btn">← Kembali ke Networking</a>
+        
+        <h1>2.2 TCP/IP & Port</h1>
+        <p>3-way handshake, Port 80, 443, 22, 21. Jalan tol data di internet</p>
+        
+        <h2>1. TCP 3-Way Handshake = Salaman</h2>
+        <p>Sebelum ngobrol, komputer salaman dulu 3x biar koneksi aman:</p>
+        
+        <div class="code-box">
+            1. Client → Server: <span class="highlight">SYN</span> "Bro boleh kenalan?"<br>
+            2. Server → Client: <span class="highlight">SYN-ACK</span> "Boleh, kamu siapa?"<br>
+            3. Client → Server: <span class="highlight">ACK</span> "Gua si A, gas ngobrol"<br>
+            Baru data dikirim!
+        </div>
+        
+        <h2>2. Port = Nomor Pintu Rumah</h2>
+        <p>1 IP bisa punya 65535 port. Tiap port buat aplikasi beda:</p>
+        
+        <table>
+            <tr>
+                <th>Port</th>
+                <th>Layanan</th>
+                <th>Catatan Hacker</th>
+            </tr>
+            <tr>
+                <td>80</td>
+                <td>HTTP</td>
+                <td>Web biasa, gak dienkripsi</td>
+            </tr>
+            <tr>
+                <td>443</td>
+                <td>HTTPS</td>
+                <td>Web aman, pake SSL/TLS</td>
+            </tr>
+            <tr>
+                <td>22</td>
+                <td>SSH</td>
+                <td>Remote server Linux. Target empuk</td>
+            </tr>
+            <tr>
+                <td>21</td>
+                <td>FTP</td>
+                <td>Transfer file, password polos</td>
+            </tr>
+        </table>
+        
+        <h2>3. Command Wajib Hacker</h2>
+        <div class="code-box">
+            <span class="highlight">netstat -an</span> → Liat port yang lagi dibuka di PC kamu<br>
+            <span class="highlight">telnet google.com 80</span> → Cek port 80 nyambung gak<br>
+            <span class="highlight">nmap -p 22,80,443 target.com</span> → Scan 3 port penting
+        </div>
+        
+        <div class="latihan">
+            🔥 <b>Latihan 1 Menit:</b><br>
+            1. Buka CMD/Terminal ketik: <span class="highlight">netstat -an</span><br>
+            2. Cari tulisan <span class="highlight">LISTENING</span> → itu port yang lagi jaga pintu PC kamu<br>
+            3. Coba <span class="highlight">telnet google
