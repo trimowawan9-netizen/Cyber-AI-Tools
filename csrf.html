@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3.4 CSRF - Cyber Academy</title>
+    <style>
+        body {margin: 0; font-family: 'Courier New', monospace; background: #0a0a0a; color: #00d4ff; padding: 20px; line-height: 1.6;}
+        .container {max-width: 800px; margin: 0 auto;}
+        h1 {color: #00d4ff; text-shadow: 0 0 10px #00d4ff;}
+        h2 {color: #00d4ff; margin-top: 30px; border-bottom: 1px solid #00d4ff; padding-bottom: 5px;}
+        .warning {color: #ff4444; font-weight: bold; background: #1a1a1a; padding: 15px; border-radius: 5px; border-left: 3px solid #ff4444;}
+        .code-box {background: #111; border-left: 3px solid #00d4ff; padding: 15px; margin: 15px 0; overflow-x: auto;}
+        .safe {border-left-color: #00ff88;}
+        .highlight {color: #ffaa00;}
+        .back-btn {display: inline-block; margin-bottom: 20px; padding: 10px 20px; background: #00d4ff; color: #0a0a0a; text-decoration: none; border-radius: 5px; font-weight: bold;}
+        .analogi {color: #ffaa00; font-style: italic; background: #1a1a1a; padding: 10px; border-radius: 5px;}
+        .latihan {background: #1a1a1a; border: 1px solid #00d4ff; padding: 15px; margin-top: 20px; border-radius: 5px;}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="web-security.html" class="back-btn">← Kembali ke Web Security</a>
+        
+        <h1>3.4 CSRF Cross Site Request Forgery</h1>
+        
+        <div class="warning">
+            ⚠️ ETIKA: CSRF cuma boleh diuji di DVWA, OWASP WebGoat, atau web lab sendiri. 
+            Bikin form jahat ke web asli = ilegal, sama aja nyolong duit orang.
+        </div>
+        
+        <h2>1. Apa itu CSRF?</h2>
+        <div class="analogi">
+            Analogi: Kamu login ke ATM, terus ada orang nyelipin kertas "Transfer 10jt ke saya" 
+            ke tombol ATM. Kamu kira mau pencet "Cek Saldo", tapi yang kepencet kertas itu.
+        </div>
+        <p>CSRF = attacker nyuruh browser korban ngirim request ke web lain tanpa korban sadar. 
+        Syaratnya: korban harus lagi login di web target.</p>
+        
+        <h2>2. Target CSRF Paling Bahaya</h2>
+        <div class="code-box">
+            <span class="highlight">1. Ganti Password/Email:</span> Akun korban diambil alih<br>
+            <span class="highlight">2. Transfer Dana:</span> E-wallet, bank, crypto<br>
+            <span class="highlight">3. Post Komentar:</span> Spam dari akun korban<br>
+            <span class="highlight">4. Ganti Setting:</span> Matikan 2FA korban
+        </div>
+        
+        <h2>3. Cara Defense CSRF = Wajib Pake Ini</h2>
+        <div class="code-box safe">
+            <span class="highlight">1. CSRF Token</span><br>
+            Setiap form kasih kode rahasia random. Server cek: "kodenya bener gak?"<br>
+            Kalau request dari web jahat = gak punya token = ditolak.<br><br>
+            
+            <span class="highlight">2. SameSite Cookie</span><br>
+            Set cookie: SameSite=Strict. Browser gak akan bawa cookie login kalau request dari web lain.<br><br>
+            
+            <span class="highlight">3. Cek Referer/Origin Header</span><br>
+            Server nanya: "Request ini dari web gua sendiri gak?" Kalau dari web lain = blokir.<br><br>
+            
+            <span class="highlight">4. Konfirmasi User</span><br>
+            Aksi penting kayak transfer/ganti password wajib minta password lagi.
+        </div>
+        
+        <h2>4. Lab Legal Buat Paham CSRF</h2>
+        <div class="code-box">
+            1. <span class="highlight">DVWA</span> → Menu CSRF → level low ke high<br>
+            2. <span class="highlight">OWASP WebGoat</span> → Modul CSRF lengkap<br>
+            3. <span class="highlight">PortSwigger CSRF Lab</span> → Gratis, ada hintnya
+        </div>
+        
+        <div class="latihan">
+            🔥 <b>Latihan Paham Konsep:</b><br>
+            1. Buka 2 tab: Tab 1 login Facebook, Tab 2 buka web random<br>
+            2. Pikir: Kenapa FB gak bisa diganti fotonya dari Tab 2?<br>
+            3. Jawaban: Karena FB pake CSRF Token + SameSite Cookie<br>
+            4. Itu defense yang bikin hacker CSRF frustasi
+        </div>
+        
+        <p style="margin-top:30px; color:#888;">CSRF gampang dicegah tapi sering dilupain dev pemula. Jadi kalau kamu paham ini = skill kamu udah di atas rata-rata developer Indo.</p>
+    </div>
+</body>
+</html>
