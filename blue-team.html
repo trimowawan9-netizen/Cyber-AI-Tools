@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7. BLUE TEAM - Cyber Academy</title>
+    <style>
+        body {margin: 0; font-family: 'Courier New', monospace; background: #0a0a0a; color: #00ff88; padding: 20px;}
+        .container {max-width: 800px; margin: 0 auto;}
+        h1 {text-align: center; color: #00ff88; text-shadow: 0 0 10px #00ff88;}
+        .subtitle {text-align: center; color: #888; margin-bottom: 40px;}
+        .module {background: #111; border: 2px solid #00ff88; border-radius: 10px; padding: 20px; margin-bottom: 15px; cursor: pointer; transition: all 0.3s;}
+        .module:hover {background: #1a1a1a; box-shadow: 0 0 20px #00ff88; transform: translateX(10px);}
+        .module h3 {margin: 0; color: #00ff88;}
+        .module p {margin: 5px 0 0 0; color: #aaa; font-size: 14px;}
+        .back-btn {display: inline-block; margin-bottom: 20px; padding: 10px 20px; background: #00ff88; color: #0a0a0a; text-decoration: none; border-radius: 5px; font-weight: bold;}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="roadmap.html" class="back-btn">← Kembali ke Roadmap</a>
+        <h1>7. BLUE TEAM</h1>
+        <p class="subtitle">Jadi defender - 3 sub-bab</p>
+        
+        <div class="module" onclick="alert('SIEM - Coming Soon!')">
+            <h3>1. SIEM</h3>
+            <p>Splunk, Wazuh, Elastic. Mesin deteksi serangan 24 jam</p>
+        </div>
+        
+        <div class="module" onclick="alert('Log Analysis - Coming Soon!')">
+            <h3>2. Log Analysis</h3>
+            <p>Bedah file log. Cari jejak hacker kayak detektif</p>
+        </div>
+        
+        <div class="module" onclick="alert('Incident Response - Coming Soon!')">
+            <h3>3. Incident Response</h3>
+            <p>Pas kena hack ngapain? SOP, Containment, Recovery</p>
+        </div>
+    </div>
+</body>
+</html>
