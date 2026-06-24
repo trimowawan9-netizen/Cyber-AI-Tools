@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1.4 Python Dasar - Cyber Academy</title>
+    <style>
+        body {margin: 0; font-family: 'Courier New', monospace; background: #0a0a0a; color: #00ff88; padding: 20px; line-height: 1.6;}
+        .container {max-width: 800px; margin: 0 auto;}
+        h1 {color: #00ff88; text-shadow: 0 0 10px #00ff88;}
+        h2 {color: #00ff88; margin-top: 30px;}
+        .back-btn {display: inline-block; margin-bottom: 20px; padding: 10px 20px; background: #00ff88; color: #0a0a0a; text-decoration: none; border-radius: 5px; font-weight: bold;}
+        .box {background: #111; border-left: 4px solid #00ff88; padding: 15px; margin: 20px 0;}
+        code {background: #222; padding: 8px 12px; border-radius: 3px; color: #ffaa00; display: block; margin: 10px 0; white-space: pre;}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="fundamental.html" class="back-btn">← Kembali ke Fundamental</a>
+        <h1>1.4 Python Dasar</h1>
+        <p>Syntax, variable, loop, function. Bahasa utama buat bikin tools hacker</p>
+        
+        <h2>1. Variable = Kotak Penyimpanan</h2>
+        <p>Tempat nyimpen data. Python gak ribet, gak pake tipe data</p>
+        <code>nama = "Bro Hacker"
+umur = 20
+aktif = True
+print(nama)</code>
+        
+        <h2>2. Loop = Kerjain Berulang</h2>
+        <p>Buat bruteforce, scan port, spam request</p>
+        <code>for i in range(5):
+    print("Coba login ke-", i)</code>
+        
+        <h2>3. If Else = Logika Keputusan</h2>
+        <p>Buat bikin kondisi: kalo bener gini, kalo salah gitu</p>
+        <code>password = "admin123"
+if password == "admin123":
+    print("Berhasil masuk!")
+else:
+    print("Password salah")</code>
+        
+        <h2>4. Function = Kotak Ajaib</h2>
+        <p>Kumpulin kode biar dipake berulang. Hacker wajib pake ini</p>
+        <code>def scan_port(ip, port):
+    print(f"Scan {ip} port {port}")
+    return "Open"
+
+hasil = scan_port("192.168.1.1", 80)</code>
+        
+        <div class="box">
+            <b>🔥 Kenapa Python Wajib?</b><br>
+            1. 90% tools hacker pake Python: Nmap, Metasploit, Burp Suite<br>
+            2. Syntax paling gampang dibanding C/C++<br>
+            3. Library banyak: requests, socket, scapy
+        </div>
+        
+        <div class="box">
+            <b>Latihan 1 menit:</b> Buka https://replit.com → New → Python → 
+            Copas kode variable di atas → Run. Liat hasilnya!
+        </div>
+    </div>
+</body>
+</html>
