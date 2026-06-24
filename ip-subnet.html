@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2.1 IP Address & Subnet - Cyber Academy</title>
+    <style>
+        body {margin: 0; font-family: 'Courier New', monospace; background: #0a0a0a; color: #00ff88; padding: 20px; line-height: 1.6;}
+        .container {max-width: 800px; margin: 0 auto;}
+        h1 {color: #00ff88; text-shadow: 0 0 10px #00ff88;}
+        h2 {color: #00ff88; margin-top: 30px; border-bottom: 1px solid #00ff88; padding-bottom: 5px;}
+        .code-box {background: #111; border-left: 3px solid #00ff88; padding: 15px; margin: 15px 0; overflow-x: auto;}
+        .highlight {color: #ffaa00;}
+        .back-btn {display: inline-block; margin-bottom: 20px; padding: 10px 20px; background: #00ff88; color: #0a0a0a; text-decoration: none; border-radius: 5px; font-weight: bold;}
+        .latihan {background: #1a1a1a; border: 1px solid #00ff88; padding: 15px; margin-top: 20px; border-radius: 5px;}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="networking.html" class="back-btn">← Kembali ke Networking</a>
+        
+        <h1>2.1 IP Address & Subnet</h1>
+        <p>IPv4, IPv6, CIDR, Public vs Private IP. Alamat rumah komputer di internet</p>
+        
+        <h2>1. IP Address = Alamat Rumah</h2>
+        <p>Setiap device nyambung internet punya alamat unik. Biar data gak nyasar.</p>
+        
+        <div class="code-box">
+            <span class="highlight">IPv4:</span> 192.168.1.1 → 4 angka, 0-255<br>
+            <span class="highlight">IPv6:</span> 2001:0db8:85a3:: → 8 blok, buat gantiin IPv4 yang abis<br>
+            <span class="highlight">Public IP:</span> Alamat internet kamu, keliatan dari luar<br>
+            <span class="highlight">Private IP:</span> Alamat lokal, cuma di wifi rumah: 192.168.x, 10.x
+        </div>
+        
+        <h2>2. Subnet & CIDR = Kode Pos</h2>
+        <p>CIDR itu cara nulis "blok IP" biar gak nulis satu-satu. /24 artinya 255.255.255.0</p>
+        
+        <div class="code-box">
+            192.168.1.0/24 = IP dari 192.168.1.1 sampe 192.168.1.254<br>
+            10.0.0.0/8 = Blok gede banget, buat perusahaan<br>
+            /32 = 1 IP doang, /0 = semua IP di dunia
+        </div>
+        
+        <h2>3. Cara Baca IP Hacker</h2>
+        <div class="code-box">
+            8.8.8.8 = DNS Google<br>
+            127.0.0.1 = Localhost = komputer kamu sendiri<br>
+            0.0.0.0 = Semua interface, buat dengerin koneksi masuk
+        </div>
+        
+        <div class="latihan">
+            🔥 <b>Latihan 1 Menit:</b><br>
+            1. Buka CMD/Terminal ketik: <span class="highlight">ipconfig</span> Windows / <span class="highlight">ifconfig</span> Linux<br>
+            2. Cari "IPv4 Address" itu IP private kamu di wifi<br>
+            3. Google "what is my ip" → itu IP public kamu
+        </div>
+    </div>
+</body>
+</html>
