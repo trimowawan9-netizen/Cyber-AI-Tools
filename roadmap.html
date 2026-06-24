@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cyber AI Academy - Roadmap 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Rajdhani:wght@400;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#050a14;font-family:'Rajdhani',sans-serif;color:#e0e6ed;min-height:100vh;overflow-x:hidden}
+body::before{content:'';position:fixed;top:0;left:0;width:100%;height:100%;background:linear-gradient(rgba(0,212,255,0.08) 1px,transparent 1px),linear-gradient(90deg,rgba(0,212,255,0.08) 1px,transparent 1px);background-size:60px 60px;animation:gridMove 25s linear infinite;z-index:-2}
+@keyframes gridMove{0%{transform:translate(0,0)}100%{transform:translate(60px,60px)}}
+body::after{content:'';position:fixed;top:-50%;left:-50%;width:200%;height:200%;background:radial-gradient(circle,rgba(0,212,255,0.25) 0%,transparent 45%);animation:shine 10s ease-in-out infinite;z-index:-1}
+@keyframes shine{0%,100%{transform:rotate(0deg) scale(1)}50%{transform:rotate(180deg) scale(1.3)}}
+.container{max-width:1200px;margin:auto;padding:50px 20px;text-align:center}
+.cyber-btn{position:relative;display:inline-block;padding:22px 55px;font-size:24px;font-weight:900;font-family:'Orbitron',sans-serif;color:#fff;text-decoration:none;text-transform:uppercase;letter-spacing:3px;background:linear-gradient(135deg,#0a0e27 0%,#1a233a 50%,#0a0e27 100%);border:3px solid #00d4ff;border-radius:12px;clip-path:polygon(10% 0%,90% 0%,100% 50%,90% 100%,10% 100%,0% 50%);box-shadow:0 0 25px #00d4ff,0 0 50px #00d4ff,inset 0 0 20px rgba(0,212,255,0.4);transition:0.4s;cursor:pointer;margin-bottom:50px}
+.cyber-btn::before{content:'';position:absolute;top:0;left:0;width:100%;height:100%;background:repeating-linear-gradient(45deg,transparent,transparent 8px,rgba(0,212,255,0.25) 8px,rgba(0,212,255,0.25) 16px);opacity:0.6;animation:circuit 4s linear infinite}
+@keyframes circuit{0%{background-position:0 0}100%{background-position:32px 32px}}
+.cyber-btn:hover{transform:scale(1.1);box-shadow:0 0 40px #00ff88,0 0 80px #00ff88,inset 0 0 30px rgba(0,255,136,0.6);border-color:#00ff88}
+h1{font-family:'Orbitron',sans-serif;font-size:36px;color:#00d4ff;text-shadow:0 0 20px #00d4ff;margin-bottom:10px}
+.sub-title{color:#a0aec0;font-size:18px;margin-bottom:50px}
+.grid-roadmap{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:25px}
+.card{background:linear-gradient(135deg,rgba(10,14,39,0.9),rgba(26,35,58,0.9));border:2px solid #00d4ff;border-radius:15px;padding:30px;cursor:pointer;transition:0.3s;clip-path:polygon(8% 0%,92% 0%,100% 15%,100% 85%,92% 100%,8% 100%,0% 85%,0% 15%)}
+.card:hover{transform:translateY(-8px) scale(1.03);border-color:#00ff88;box-shadow:0 10px 35px #00ff88}
+.card .icon{font-size:50px;margin-bottom:15px;filter:drop-shadow(0 0 10px #00d4ff)}
+.card h3{font-family:'Orbitron',sans-serif;color:#00d4ff;font-size:20px;margin:10px 0}
+.card p{color:#cbd5e0;font-size:15px;line-height:1.6}
+.badge{background:#00d4ff;color:#050a14;padding:5px 14px;border-radius:20px;font-size:12px;font-weight:700;display:inline-block;margin-top:12px}
+.footer{margin-top:60px;color:#718096;font-size:13px}
+</style>
+</head>
+<body>
+<div class="container">
+  <a href="index.html" class="cyber-btn">⚡ ENTER CYBER ACADEMY ⚡</a>
+  <h1>PILIH JALUR BELAJAR KAMU</h1>
+  <p class="sub-title">27+ Sub-bab | Dari Nol → Jadi Pro Cybersecurity</p>
+  <div class="grid-roadmap">
+    <div class="card" onclick="alert('FUNDAMENTAL\n1. OS Basics\n2. Linux Command\n3. Network\n4. Python Dasar')">
+      <div class="icon">💻</div><h3>1. FUNDAMENTAL</h3><p>Pondasi wajib hacker</p><span class="badge">4 Sub-bab</span>
+    </div>
+    <div class="card" onclick="alert('NETWORKING\n1. TCP/IP\n2. Firewall/VPN\n3. Wireshark\n4. Protokol')">
+      <div class="icon">🌐</div><h3>2. NETWORKING</h3><p>Bedah internet & data</p><span class="badge">4 Sub-bab</span>
+    </div>
+    <!-- INI YANG UDAH GUA FIX BRO -->
+    <div class="card" onclick="window.location='web-security.html'">
+      <div class="icon">🕸️</div><h3>3. WEB SECURITY</h3><p>Bobol & jagain website. Paling laku!</p><span class="badge">5 Sub-bab</span>
+    </div>
+    <div class="card" onclick="alert('SYSTEM SECURITY\n1. Password Cracking\n2. Malware Analysis\n3. OS Hardening')">
+      <div class="icon">🔒</div><h3>4. SYSTEM SECURITY</h3><p>Kunci & bobol OS</p><span class="badge">3 Sub-bab</span>
+    </div>
+    <div class="card" onclick="alert('PENETRATION TESTING\n1. Recon\n2. Scanning\n3. Exploitation\n4. PrivEsc\n5. Post\n6. Report')">
+      <div class="icon">🎯</div><h3>5. PENETRATION TESTING</h3><p>Pentest A-Z legal</p><span class="badge">6 Sub-bab</span>
+    </div>
+    <div class="card" onclick="alert('CLOUD SECURITY\n1. AWS/Azure\n2. S3 Misconfig\n3. IAM')">
+      <div class="icon">☁️</div><h3>6. CLOUD SECURITY</h3><p>Jagain cloud 2026</p><span class="badge">3 Sub-bab</span>
+    </div>
+    <div class="card" onclick="alert('BLUE TEAM\n1. SIEM\n2. Incident Response\n3. Threat Hunting')">
+      <div class="icon">🛡️</div><h3>7. BLUE TEAM</h3><p>Jadi defender</p><span class="badge">3 Sub-bab</span>
+    </div>
+    <div class="card" onclick="alert('ADVANCED\n1. Reverse Engineering\n2. Cryptography\n3. Bug Bounty')">
+      <div class="icon">⚡</div><h3>8. ADVANCED</h3><p>Level sultan</p><span class="badge">3 Sub-bab</span>
+    </div>
+  </div>
+  <div class="footer">© 2026 Cyber AI Tools | Roadmap Interaktif v2.0 Final No Edit</div>
+</div>
+</body>
+</html>
