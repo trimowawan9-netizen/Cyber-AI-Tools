@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2.3 DNS & HTTP - Cyber Academy</title>
+    <style>
+        body {margin: 0; font-family: 'Courier New', monospace; background: #0a0a0a; color: #00ff88; padding: 20px; line-height: 1.6;}
+        .container {max-width: 800px; margin: 0 auto;}
+        h1 {color: #00ff88; text-shadow: 0 0 10px #00ff88;}
+        h2 {color: #00ff88; margin-top: 30px; border-bottom: 1px solid #00ff88; padding-bottom: 5px;}
+        .code-box {background: #111; border-left: 3px solid #00ff88; padding: 15px; margin: 15px 0; overflow-x: auto;}
+        .highlight {color: #ffaa00;}
+        .back-btn {display: inline-block; margin-bottom: 20px; padding: 10px 20px; background: #00ff88; color: #0a0a0a; text-decoration: none; border-radius: 5px; font-weight: bold;}
+        .latihan {background: #1a1a1a; border: 1px solid #00ff88; padding: 15px; margin-top: 20px; border-radius: 5px;}
+        .flow {background: #111; padding: 15px; border-radius: 5px; margin: 15px 0;}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="networking.html" class="back-btn">← Kembali ke Networking</a>
+        
+        <h1>2.3 DNS & HTTP</h1>
+        <p>Cara domain jadi website, Request & Response. Dari ketik sampe muncul web</p>
+        
+        <h2>1. DNS = Buku Telepon Internet</h2>
+        <p>Komputer gak ngerti "google.com". Dia cuma ngerti IP. DNS tugasnya nerjemahin:</p>
+        
+        <div class="flow">
+            google.com → DNS Server → 142.250.66.78<br>
+            Ibarat: "Pak RT" → "Buku Telepon" → "Alamat lengkap rumah"
+        </div>
+        
+        <div class="code-box">
+            <span class="highlight">nslookup google.com</span> → Liat IP google<br>
+            <span class="highlight">ping google.com</span> → Cek koneksi + IP<br>
+            <span class="highlight">8.8.8.8</span> = DNS Google, <span class="highlight">1.1.1.1</span> = DNS Cloudflare
+        </div>
+        
+        <h2>2. HTTP Request & Response = Tanya Jawab</h2>
+        <p>Browser sama server ngobrol pake HTTP. Formatnya gini:</p>
+        
+        <div class="code-box">
+            <span class="highlight">REQUEST:</span><br>
+            GET /login HTTP/1.1<br>
+            Host: target.com<br>
+            User-Agent: Chrome<br>
+            <br>
+            <span class="highlight">RESPONSE:</span><br>
+            HTTP/1.1 <span class="highlight">200 OK</span><br>
+            Content-Type: text/html<br>
+            &lt;html&gt;...isi web...&lt;/html&gt;
+        </div>
+        
+        <h2>3. Status Code = Bahasa Server</h2>
+        <div class="code-box">
+            <span class="highlight">200 OK</span> = Sukses, web muncul<br>
+            <span class="highlight">301/302</span> = Pindah alamat, redirect<br>
+            <span class="highlight">403 Forbidden</span> = Dilarang masuk, akses ditolak<br>
+            <span class="highlight">404 Not Found</span> = Halaman gak ada<br>
+            <span class="highlight">500 Error</span> = Servernya error sendiri
+        </div>
+        
+        <div class="latihan">
+            🔥 <b>Latihan 1 Menit - Jadi Hacker:</b><br>
+            1. Buka Chrome → F12 → tab Network → refresh web<br>
+            2. Klik file "document" → liat tab Headers<br>
+            3. Itu isi Request & Response beneran! Cari "Status Code: 200"<br>
+            4. CMD ketik: <span class="highlight">nslookup facebook.com</span> → liat IP-nya
+        </div>
+    </div>
+</body>
+</html>
