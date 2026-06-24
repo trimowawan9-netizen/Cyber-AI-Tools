@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2.4 Tools Nmap - Cyber Academy</title>
+    <style>
+        body {margin: 0; font-family: 'Courier New', monospace; background: #0a0a0a; color: #00ff88; padding: 20px; line-height: 1.6;}
+        .container {max-width: 800px; margin: 0 auto;}
+        h1 {color: #00ff88; text-shadow: 0 0 10px #00ff88;}
+        h2 {color: #00ff88; margin-top: 30px; border-bottom: 1px solid #00ff88; padding-bottom: 5px;}
+        .code-box {background: #111; border-left: 3px solid #00ff88; padding: 15px; margin: 15px 0; overflow-x: auto; font-size: 14px;}
+        .highlight {color: #ffaa00;}
+        .warning {color: #ff4444; font-weight: bold;}
+        .back-btn {display: inline-block; margin-bottom: 20px; padding: 10px 20px; background: #00ff88; color: #0a0a0a; text-decoration: none; border-radius: 5px; font-weight: bold;}
+        .latihan {background: #1a1a1a; border: 1px solid #00ff88; padding: 15px; margin-top: 20px; border-radius: 5px;}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="networking.html" class="back-btn">← Kembali ke Networking</a>
+        
+        <h1>2.4 Tools Nmap</h1>
+        <p>Scan port, OS detection, Script engine. "Google Maps" buat hacker</p>
+        
+        <p class="warning">⚠️ ETIKA HACKER: Scan cuma di jaringan kamu sendiri atau izin tertulis. Scan IP orang = ilegal!</p>
+        
+        <h2>1. Nmap = Alat Scan Port</h2>
+        <p>Tugas nmap: ngetok semua pintu rumah target, liat pintu mana yang kebuka + pintunya buat apa</p>
+        
+        <div class="code-box">
+            <span class="highlight">nmap target.com</span><br>
+            → Scan 1000 port paling umum. Output: port 80 open, 443 open<br><br>
+            
+            <span class="highlight">nmap -sV target.com</span><br>
+            → Version scan. Ketauan Apache 2.4, OpenSSH 7.2<br><br>
+            
+            <span class="highlight">nmap -O target.com</span><br>
+            → OS detection. Ketauan target pake Linux/Windows<br><br>
+            
+            <span class="highlight">nmap -sC target.com</span><br>
+            → Script scan. Auto cek vulnerability basic
+        </div>
+        
+        <h2>2. Baca Hasil Nmap Kayak Pro</h2>
+        <div class="code-box">
+            PORT    STATE  SERVICE    VERSION<br>
+            22/tcp  open   ssh        OpenSSH 7.2p2<br>
+            80/tcp  open   http       Apache 2.4.18<br>
+            443/tcp open   https      Apache 2.4.18<br>
+            <br>
+            <span class="highlight">open</span> = Pintu kebuka<br>
+            <span class="highlight">closed</span> = Pintu ada tapi dikunci<br>
+            <span class="highlight">filtered</span> = Ada firewall, gak bisa dicek
+        </div>
+        
+        <h2>3. Command Combo Wajib Hafal</h2>
+        <div class="code-box">
+            <span class="highlight">nmap -sV -sC -O -p- target.com</span><br>
+            Artinya: Scan semua port + versi + OS + script<br>
+            Ini scan lengkap tapi lama + berisik, gampang ketauan IDS
+        </div>
+        
+        <h2>4. Install Nmap</h2>
+        <div class="code-box">
+            Linux: <span class="highlight">sudo apt install nmap</span><br>
+            Windows: Download di nmap.org, namanya "Zenmap" ada GUI-nya<br>
+            Termux: <span class="highlight">pkg install nmap</span>
+        </div>
+        
+        <div class="latihan">
+            🔥 <b>Latihan Aman 1 Menit:</b><br>
+            1. Scan diri sendiri dulu: <span class="highlight">nmap localhost</span><br>
+            2. Atau scan router rumah: <span class="highlight">nmap 192.168.1.1</span><br>
+            3. Liat port 80, 443 kebuka gak. Kalo ada = web router jalan<br>
+            <span class="warning">JANGAN SCAN IP PUBLIK ORANG TANPA IZIN!</span>
+        </div>
+    </div>
+</body>
+</html>
