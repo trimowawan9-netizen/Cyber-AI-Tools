@@ -14,64 +14,59 @@ Dengan memahami cara kerja serangan = lu bisa bangun tameng yang lebih kuat.
 Melanggar = Tanggung jawab pribadi. Kami tidak bertanggung jawab atas penyalahgunaan.
 
 ### 🎯 TUJUAN WEBSITE INI
-
-1. **Edukasi Gratis**: Ngajarin dasar cyber security modal HP Android doang. 
-   Gak perlu laptop mahal buat mulai belajar defense.
-
-2. **Naikin Melek Digital**: Biar netizen Indonesia paham trik hacker: 
-   SQLi, XSS, CSRF, Phishing. Kalo udah paham cara kerjanya, otomatis bisa ngindar.
-
-3. **Tools Praktis Anti-Korban**: Kasih tools gratis buat ngecek link/email/password 
-   mencurigakan SEBELUM lu klik & ketipu.
-
-4. **Komunitas Belajar**: Tempat diskusi, tanya jawab, lapor bug. Kita belajar bareng 
-   jadi benteng digital yang lebih kuat.
+1. **Edukasi Gratis**: Ngajarin dasar cyber security modal HP Android doang
+2. **Naikin Melek Digital**: Biar paham trik hacker: SQLi, XSS, CSRF, Phishing 
+3. **Tools Praktis Anti-Korban**: Cek link/email/password mencurigakan SEBELUM ketipu
+4. **Komunitas Belajar**: Diskusi & lapor bug bareng biar makin kuat
 
 Singkatnya: **"Kasih pancing + ajarin mancing"**, bukan "kasih ikan curian" 🐟
 
 ### 📚 MATERI YANG UDAH RILIS
-
-| Bab | Materi | Status | Fokus |
+| Bab | Materi | Status | Link |
 | --- | --- | --- | --- |
-| Bab 1 | Pengenalan Cyber Security | ✅ Rilis | Mindset Whitehat |
-| Bab 2 | Dasar Jaringan & Linux | ✅ Rilis | Pondasi Penting |
-| Bab 3 | Web Security | ✅ Rilis Lengkap | SQLi, XSS, CSRF, Clickjacking, SSRF - Versi Defense |
-| Bab 4 | System Security | 🚧 Coming Soon | Malware, Ransomware, Antivirus |
-| Bab 5 | Pentest Legal | 📝 Draft | Cara test keamanan diri sendiri |
-| Bab 6-8 | OSINT, Crypto, Forensik | ⏳ Request | Vote di Issues GitHub |
+| Bab 3 | Web Security | ✅ Rilis Lengkap | [Buka Roadmap](https://trimowawan9-netizen.github.io/Cyber-AI-Tools/roadmap.html) |
+| Bab 4-8 | System, OSINT, Crypto | 🚧 Coming Soon | Vote di Issues GitHub |
 
-Klik Bab 3 buat langsung belajar: [Buka Roadmap Lengkap](https://trimowawan9-netizen.github.io/Cyber-AI-Tools/roadmap.html)
+### 🛠️ TOOLS GRATIS
+1. **AI Phishing Checker** 2. **Password Strength** 3. **Email Scam Detector**  
+[Coba Toolsnya Disini](https://trimowawan9-netizen.github.io/Cyber-AI-Tools/)
 
-### 🛠️ TOOLS GRATIS YANG ADA
-
-1. **AI Phishing Checker**: Paste link, AI bakal analisis bahaya apa enggak
-2. **Password Strength Checker**: Tes password lu kuat apa masih "123456" 
-3. **Email Scam Detector**: Bedah email, cari ciri-ciri penipuan
-
-Coba Toolsnya: [Buka Dashboard Tools](https://trimowawan9-netizen.github.io/Cyber-AI-Tools/)
-
-### 🤝 CARA SUPPORT PROGRAM INI BIAR LANJUT
-
-Gak perlu duit le, support gratis juga ngefek banget:
-
-1. **⭐ Kasih Bintang/Star** repo ini → Biar GitHub rekomendasiin ke orang lain
-2. **🐛 Lapor Bug/Typo** lewat Issues → Biar web makin bagus
-3. **💬 Kasih Saran** Bab 4 mau bahas apa? Malware? Wifi? Komen aja
-4. **🔗 Share** ke temen/grup biar gak ada korban phising lagi
-
-### 👨‍💻 BUAT DEVELOPER
-
-Repo ini dibuat pake HTML, CSS, JS doang. 100% jalan di GitHub Pages, gak perlu backend.
-Mau kontribusi? Fork → Pull Request. Kita open source biar ilmunya nyebar.
+### 🤝 CARA SUPPORT PROGRAM INI
+⭐ Kasih Bintang/Star repo ini + 🐛 Lapor Bug + 💬 Komen request Bab 4 = Gratis tapi ngefek banget buat semangat gua!
 
 ### 📜 LISENSI
 `MIT License` - Bebas dipake, dimodif, disebar buat edukasi non-komersial.
 Syarat: Tetep cantumin kredit + disclaimer "Defense Only".
 
-### 📞 KONTAK & SOSMED
-Ada pertanyaan/kritik? Buka Issues di GitHub ini.
-Inget ya: Kita diskusi DEFENSE, bukan jual beli akun hasil hack 😁
-
 ---
 **Dibuat dengan ❤️ dari Palangkaraya untuk Indonesia bebas phising**  
-**Last Update: 24 April 2026 | Bab 3.5 SSRF baru rilis**
+**Last Update: 24 April 2026**
+
+=== BAGIAN BAWAH INI KHUS FOOTER HTML - COPY KE roadmap.html ===
+
+
+<!-- FOOTER DISCLAIMER - WAJIB ADA BUAT AMAN UU ITE -->
+<footer style="background: #0a0a0a; color: #00ff41; padding: 20px; margin-top: 50px; border-top: 2px solid #00ff41; font-family: 'Courier New', monospace; text-align: center;">
+  
+  <div style="max-width: 800px; margin: 0 auto;">
+    <p style="font-size: 16px; font-weight: bold; margin-bottom: 10px;">
+      ⚠️ EDUKASI & DEFENSE ONLY - NO OFFENSIVE ⚠️
+    </p>
+    
+    <p style="font-size: 13px; line-height: 1.6; opacity: 0.9;">
+      Website Cyber Academy ini 100% untuk tujuan pembelajaran & proteksi diri. 
+      Dilarang keras menggunakan materi/tools di sini untuk menyerang, membobol, 
+      mencuri data, atau merugikan pihak lain. Kita Whitehat, bukan Blackhat.
+      <br><br>
+      Dengan mengakses website ini, Anda setuju hanya menggunakannya untuk edukasi. 
+      Segala penyalahgunaan di luar tanggung jawab pembuat.
+    </p>
+    
+    <p style="font-size: 12px; margin-top: 15px; opacity: 0.7;">
+      © 2026 trimowawan9 | 
+      <a href="https://github.com/trimowawan9-netizen/Cyber-AI-Tools" style="color: #00ff41; text-decoration: none;">GitHub</a> | 
+      Lisensi: MIT | Dibuat untuk Indonesia bebas phising 🇮🇩
+    </p>
+  </div>
+  
+</footer>
